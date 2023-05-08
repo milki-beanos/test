@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Mystery Solving Website</title>
+  <link rel="stylesheet" href="css/sherlock.css">
+  <style>
+   }
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+  }
+  
+    body {
+      background-color: #ffffff;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+    
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    
+    .timer {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .timer button {
+      padding: 10px 20px;
+      font-size: 24px;
+      background-color: white;
+      color: #2f2f2f;
+      border: none;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .timer button:hover {
+      background-color: #4a4a4a;
+      color: white;
+    }
+
+
+    
+
+    #banner {
+      background-color: #333;
+      text-align: center;
+      padding: 10px;
+    }
+
+    #banner img {
+      max-width: 50%;
+      height: auto;
+      max-height: 100px; /* Adjust this value as needed */
+    }
+
+    #banner a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Mystery Solving Website</h1>
+    <center><p>Can you solve the great mystery? Time is running out!</p></div>
+        <center><div class="timer">
+            <button id="timerButton">Start 48-hour Timer</button>
+          </div>
+  
+ 
+
+<style>
+
+
+    
+  background-color: white;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+text-align: center;
+font-size: 40px;
+font-family: 'Impact', sans-serif;
+color: #000000;
+margin-top: 50px;
+}
+
+#invite {
+text-align: center;
+margin: 50px auto;
+max-width: 800px;
+}
+
+#invite p {
+margin-bottom: 30px;
+text-align: justify;
+font-family: 'Courier New', Courier, monospace;
+font-size: 20px;
+color: #ffffff;
+}
+
+#invite p:first-of-type {
+font-size: 30px;
+color: #ffeb3b;
+margin-top: 0;
+}
+
+#invite p:last-of-type {
+font-weight: bold;
+}
+
+#invite p.highlight {
+background-color: #fff7f7;
+padding: 10px;
+border-radius: 5px;
+}
+
+#invite p.highlight span {
+color: #ffeb3b;
+font-weight: bold;
+}
+</style>
+</head>
+<body>
+    <div id="banner">
+    <img src="https://zaraaltair.com/wp-content/uploads/sites/70/2021/04/whatmakesamystery.png" width= "640" height="360"alt="Banner Image">
+  </div>
+
+  <div id="invite"> 
+  </div>
+<div id="invite">
+<h1>Mystery Invitation</h1>
+<p>You have received an invitation from the renowned detective, Mr. Beanos, to solve a perplexing mystery.</p>
+<p>Welcome, esteemed guests, to a world of intrigue and enigma! We are thrilled to extend our heartfelt greetings to each and every one of you who have been invited to embark on a thrilling journey of solving a captivating mystery.</p>
+<p>In the depths of this extraordinary occasion, you will find yourself surrounded by an air of secrecy, where each whisper holds a clue and every step you take unravels a hidden truth. It is within these moments of uncertainty that the true essence of adventure resides, beckoning the curious souls among you to step forward and unlock the secrets that lie ahead.</p>
+<p>Together, we shall delve into a realm of riddles and puzzles, where no stone shall be left unturned and no enigma shall remain unsolved. This is an opportunity to embrace the sheer joy of unraveling a tangled web of secrets, relying on your sharp wit, astute observations, and collective intellect.</p>
+<p>Immerse yourselves in this extraordinary tale, where the boundaries of reality blur, and the extraordinary becomes the norm. Engage with fellow truth-seekers, exchanging theories, collaborating, and challenging one another to push the boundaries of deductive reasoning.</p>
+<p>As you venture further into the heart of this mystifying adventure, be prepared to discover hidden chambers, cryptic codes, and a tapestry of interconnected clues that will guide you towards the ultimate truth. The path ahead may be fraught with twists and turns, but fear not, for your collective brilliance shall be your guiding light.</p>
+<p>On this remarkable journey, remember that every participant plays a pivotal role. Together, we shall weave the threads of our intellect and determination to solve this enigma that has captured our imagination. The bonds forged in pursuit of truth shall become lasting memories, cherished long after the final puzzle piece has fallen into place.</p>
+
+
+
+     <script>
+
+    function startTimer(duration, display) {
+      var timer = duration, hours, minutes, seconds;
+      var startTime = localStorage.getItem('startTime');
+      if (startTime) {
+        var elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+        timer = duration - elapsedTime;
+      }
+  
+      setInterval(function () {
+        hours = parseInt(timer / 3600, 10);
+        minutes = parseInt((timer % 3600) / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+  
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+  
+        display.textContent = hours + ":" + minutes + ":" + seconds;
+  
+        if (--timer < 0) {
+          timer = duration;
+        }
+      }, 1000);
+    }
+  
+    window.onload = function () {
+      var display = document.querySelector('#timerButton');
+      var duration = 172800; // 48 hours in seconds
+  
+      startTimer(duration, display);
+  
+      if (!localStorage.getItem('startTime')) {
+        localStorage.setItem('startTime', Date.now());
+      }
+    };
+  </script>
+</body>
+</html>
