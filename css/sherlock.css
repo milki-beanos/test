@@ -1,0 +1,56 @@
+body {
+    background-color: #2f2f2f;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .timer {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .timer button {
+    padding: 10px 20px;
+    font-size: 24px;
+    background-color: white;
+    color: #2f2f2f;
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .timer button:hover {
+    background-color: #4a4a4a;
+    color: white;
+  }
+  
+  .banner {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .banner img {
+    max-width: 100%;
+    height: auto;
+  }
+  
